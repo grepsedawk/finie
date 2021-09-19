@@ -1,28 +1,30 @@
 # Finie
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/finie`. To experiment with that code, run `bin/console` for an interactive prompt.
+`finie` is a command-line tool capable of SMS messaging your phone after a
+command finishes, with the success/fail status included in the message.
 
-TODO: Delete this and the text above, and describe your gem
+```
+    $ finie docker build .
+    $ finie sleep 300
+    $ finie yarn install
+```
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'finie'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
     $ gem install finie
 
-## Usage
+Add your configuration like so:
 
-TODO: Write usage instructions here
+```yaml
+# ~/.finie.yml
+---
+twilio:
+  account_sid: ACCOUNT_SID_FROM_TWILIO_HERE
+  auth_token: AUTH_TOKENF_FROM_TWILIO_HERE
+  from: "TWILIO_NUMBER_HERE"
+  to: "YOUR_NUMBER_HERE"
+
+```
 
 ## Development
 
