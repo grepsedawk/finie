@@ -23,7 +23,6 @@ twilio:
   auth_token: AUTH_TOKENF_FROM_TWILIO_HERE
   from: "TWILIO_NUMBER_HERE"
   to: "YOUR_NUMBER_HERE"
-
 ```
 
 ## Development
@@ -34,7 +33,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/finie. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/finie/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/grepsedawk/finie. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/grepsedawk/finie/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
