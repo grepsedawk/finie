@@ -1,3 +1,28 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require "finie"
+require 'English'
+require 'finie'
+require 'twilio-ruby'
+require 'yaml'
+
+command = ARGV.join(' ')
+system command
+status = $CHILD_STATUS
+
+config = YAML.safe_load(File.read("#{ENV['HOME']}/.finie.yml"))["twilio"]
+account_sid = config["account_sid"]
+auth_token = config["auth_token"]
+
+client = Twilio::REST::Client.new(account_sid, auth_token)
+
+client.messages.create(
+  from: config['from'],
+  to: config['to'],
+  body: <<~MSG
+    Your command has #{status.success? ? 'succeeded' : 'failed'}:
+    `#{command}`
+  MSG
+)
+
+exit status.exitstatus

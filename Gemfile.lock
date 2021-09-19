@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    finie (0.0.1)
+    finie (0.1.2)
       twilio-ruby (~> 5.58.2)
 
 GEM
