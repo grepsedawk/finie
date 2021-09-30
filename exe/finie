@@ -21,7 +21,7 @@ client.messages.create(
   to: config['to'],
   body: <<~MSG
     Your command has #{status.success? ? 'succeeded' : 'failed'} (#{status.exitstatus}):
-    `#{command}`
+    #{command}
   MSG
 )
 
